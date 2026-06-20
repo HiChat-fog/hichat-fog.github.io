@@ -1,0 +1,411 @@
+/* ==============================================
+   main.rs 风格 — 暗色、极简、打字机风格
+   ============================================== */
+
+:root {
+  --bg: #05060c;
+  --bg-soft: #0b0f1c;
+  --fg: #e7e9f2;
+  --muted: #9aa1b5;
+  --accent: #f27745;
+  --panel: rgba(255, 255, 255, 0.02);
+  --panel-border: rgba(255, 255, 255, 0.08);
+}
+
+/* ---- Reset ---- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #000;
+  color: var(--fg);
+  font-family: "Space Grotesk", Inter, system-ui, -apple-system, sans-serif;
+  letter-spacing: -0.01em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: var(--fg);
+  text-decoration: none;
+  border-bottom: 1px dotted rgba(242, 119, 69, 0.4);
+  transition: border-color 0.12s ease, color 0.12s ease;
+}
+
+a:hover {
+  color: var(--accent);
+  border-color: rgba(242, 119, 69, 0.7);
+}
+
+/* ---- Page Shell ---- */
+.page-shell {
+  min-height: 100vh;
+}
+
+.shell {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 16px;
+  color: #f5f6fb;
+  text-align: center;
+  gap: 12px;
+}
+
+/* ---- Hero ---- */
+.hero {
+  display: grid;
+  gap: 8px;
+  justify-items: center;
+}
+
+/* ---- Name ---- */
+.name {
+  font-family: "JetBrains Mono", monospace;
+  font-size: clamp(38px, 6vw, 60px);
+  letter-spacing: 0.18em;
+  color: #fff;
+}
+
+/* ---- Title Row ---- */
+.title-row {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.role {
+  font-family: "JetBrains Mono", monospace;
+  font-size: clamp(26px, 6vw, 40px);
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  letter-spacing: 0.08em;
+  transition: transform 0.24s ease;
+  max-width: none;
+  overflow: visible;
+}
+
+/* ---- Rotating Prefix ---- */
+.prefix {
+  color: var(--accent);
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(-12px) rotateX(-70deg);
+  transition: opacity 0.22s ease, transform 0.22s ease;
+  white-space: pre;
+  width: 0;
+  overflow: hidden;
+  min-width: 0;
+}
+
+.prefix.show {
+  opacity: 1;
+  transform: translateY(0) rotateX(0);
+}
+
+.spacer {
+  display: inline-block;
+  width: 0.08rem;
+}
+
+/* ---- Blinking Cursor ---- */
+.cursor {
+  display: inline-block;
+  width: 10px;
+  animation: blink 1s steps(2, start) infinite;
+  color: #fff;
+  transition: color 0.2s ease, transform 0.25s ease;
+  position: relative;
+  left: 0;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  50.1%, 100% { opacity: 0; }
+}
+
+/* ---- Stack (Buttons + Panel) ---- */
+.stack {
+  position: relative;
+  display: grid;
+  justify-items: center;
+}
+
+/* ---- Action Buttons ---- */
+.actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+.actions button {
+  background: rgba(255, 255, 255, 0.04);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+  padding: 10px 18px;
+  font-family: "JetBrains Mono", monospace;
+  letter-spacing: 0.06em;
+  font-size: 13px;
+  cursor: pointer;
+  transition: border-color 0.15s ease, transform 0.15s ease, color 0.15s ease;
+}
+
+.actions button:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: translateY(-1px);
+}
+
+/* ---- Panel Shell (positioning wrapper) ---- */
+.panel-shell {
+  position: absolute;
+  top: calc(100% + 12px);
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(640px, 92vw);
+  pointer-events: none;
+}
+
+/* ---- Panels ---- */
+.panel {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 16px 18px;
+  max-width: 520px;
+  margin: 0 auto;
+  text-align: left;
+  color: #e9ebf5;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+  width: 100%;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  pointer-events: auto;
+  animation: panelIn 0.2s ease;
+}
+
+@keyframes panelIn {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.panel-title {
+  font-family: "JetBrains Mono", monospace;
+  color: var(--accent);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.panel p {
+  margin: 0 0 8px;
+  color: #f0f2fb;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.lead {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 6px;
+}
+
+.panel a {
+  color: #fff;
+  border-bottom: 1px dotted rgba(242, 119, 69, 0.6);
+}
+
+/* ---- Contact ---- */
+.contact {
+  text-align: center;
+}
+
+.contact-link {
+  font-size: 22px;
+  font-weight: 700;
+  color: #fff;
+  border-bottom: 1px dotted rgba(242, 119, 69, 0.7);
+}
+
+/* ---- About ---- */
+.about {
+  width: fit-content;
+  min-width: 320px;
+  max-width: min(460px, 90vw);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ---- Links / Pills ---- */
+.links {
+  display: flex;
+  gap: 12px;
+  margin-top: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 9px 14px;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  font-size: 14px;
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+
+.pill:hover {
+  transform: translateY(-1px);
+}
+
+.pill svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+.pill.github {
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.pill.github:hover {
+  border-color: rgba(255, 255, 255, 0.35);
+}
+
+.pill.douyin {
+  background: rgba(0, 0, 0, 0.35);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.pill.douyin:hover {
+  border-color: rgba(255, 0, 85, 0.7);
+  box-shadow: 0 0 18px rgba(255, 0, 85, 0.15);
+}
+
+/* IM pills (微信 / QQ) — buttons not links */
+.im-links {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.pill.wechat,
+.pill.qq {
+  cursor: pointer;
+  font-family: "Space Grotesk", Inter, system-ui, sans-serif;
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.pill.wechat:hover {
+  border-color: rgba(7, 193, 96, 0.6);
+  box-shadow: 0 0 18px rgba(7, 193, 96, 0.08);
+}
+
+.pill.qq:hover {
+  border-color: rgba(18, 183, 245, 0.6);
+  box-shadow: 0 0 18px rgba(18, 183, 245, 0.08);
+}
+
+/* ---- Muted text ---- */
+.muted {
+  color: #96a0b5;
+}
+
+/* ==============================================
+   Responsive
+   ============================================== */
+
+@media (max-width: 768px) {
+  .shell {
+    padding: 8px;
+    gap: 8px;
+  }
+
+  .hero {
+    gap: 6px;
+  }
+
+  .spacer {
+    width: 0.06rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .role {
+    font-size: clamp(18px, 4vw, 26px);
+  }
+
+  .name {
+    font-size: clamp(28px, 5vw, 42px);
+  }
+}
+
+@media (max-width: 520px) {
+  .title-row {
+    flex-direction: column;
+  }
+
+  .role {
+    font-size: clamp(22px, 7vw, 30px);
+    gap: 4px;
+    max-width: 94vw;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .prefix {
+    width: 0;
+    max-width: 46vw;
+    text-align: center;
+  }
+
+  .prefix.show {
+    width: auto;
+  }
+
+  .panel-shell {
+    width: 94vw;
+  }
+}
+
+@media (max-width: 400px) {
+  .role {
+    font-size: clamp(16px, 3.5vw, 22px);
+  }
+
+  .name {
+    font-size: clamp(24px, 4.5vw, 36px);
+  }
+}

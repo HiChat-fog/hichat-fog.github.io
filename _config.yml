@@ -8,11 +8,11 @@ middle_name:
 last_name: ""
 contact_note: >
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  HiChat-fog 的个人主页 —— eBPF · Linux 内核 · RISC-V · openKylin
+  HiChat-fog 的个人主页 —— eBPF · Linux 内核 · RISC-V
 footer_text: >
-  © 2026 HiChat-fog · Built with <a href="https://github.com/alshedivat/al-folio" target="_blank">al-folio</a>
+  Built with <a href="https://github.com/alshedivat/al-folio" target="_blank">al-folio</a>
   & <a href="https://jekyllrb.com/" target="_blank">Jekyll</a>, hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
-keywords: eBPF, Linux, RISC-V, openKylin, portfolio, 个人主页
+keywords: eBPF, Linux, RISC-V, portfolio, 个人主页
 lang: zh-CN # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: 🛰️ # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 apple_touch_icon: # image name in /assets/img/ (or a rooted path / absolute URL) used for iOS home-screen bookmarks; needs a real 180x180 PNG, since Safari ignores the emoji favicon above. Left empty, iOS falls back to a screenshot of the page.

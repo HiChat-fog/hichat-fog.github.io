@@ -1,85 +1,106 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="HiChat — 操作系统、网络安全、LLM 开发">
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <title>HiChat</title>
+<!DOCTYPE html> <html lang="zh-CN"> <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <title> HiChat-fog </title> <meta name="author" content="HiChat-fog "> <meta name="description" content="HiChat-fog 的个人主页 —— eBPF · Linux 内核 · RISC-V · openKylin "> <meta name="keywords" content="eBPF, Linux, RISC-V, openKylin, portfolio, 个人主页"> <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' data: https:; media-src 'self' https:; frame-src 'self' https:; connect-src 'self' https:;"> <style>
+  :root {
+    --max-content-width: 930px;
+  }
+</style> <link rel="stylesheet" href="/assets/css/tailwind.css?v=50c64c15cbb9fd1ce6056fdb8bcb4b62"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" integrity="sha256-MVopmdyC2tYTiJ8wlktf0uh0v4NgT+vNdyVFepi7Q0c=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.5/css/academicons.min.css" integrity="sha256-SzrCOBJbGVFMahewkgjwnApaV2+av1DwMAA+/QGLyZw=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/scholar-icons@1.0.3/css/scholar-icons.css" integrity="sha256-VY3hHVj/hNX3fYG6wtbA6TcKJQl7+FthzGSyIB64klY=" crossorigin="anonymous"> <link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&amp;display=swap"> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?v=591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light"> <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%F0%9F%9B%B0%EF%B8%8F&lt;/text&gt;&lt;/svg&gt;"> <link rel="stylesheet" href="/assets/css/main.css?v=3116ba77db9ee1581d05bb3e86fbf7f1"> <link rel="canonical" href="https://hichat-fog.github.io/"> <script src="/assets/js/theme.js?v=5286c3e4c334d0ecb8fc0c40ff4fa7ec"></script> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-native.css?v=5847e5ed4a4568527aa6cfab446049ca" media="none" id="highlight_theme_dark"> <script>
+    initTheme();
+  </script> </head> <body class="fixed-top-nav "> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <button class="navbar-toggler collapsed navbar-toggler-main" type="button" data-nav-toggle="navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse navbar-collapse-main" id="navbarNav"> <ul class="navbar-nav navbar-menu-list flex-nowrap"> <li class="nav-item active"> <a class="nav-link" href="/">about <span class="sr-only">(current)</span> </a> </li> <li class="nav-item active"> <a class="nav-link" href="/">about <span class="sr-only">(current)</span> </a> </li> <li class="nav-item "> <a class="nav-link" href="/projects/">projects </a> </li> <li class="nav-item"> <button id="search-toggle" type="button" title="Search" aria-label="Open search"> <span class="nav-link">ctrl k <i class="fa-solid fa-magnifying-glass"></i></span> </button> </li> <li class="toggle-container"> <button id="light-toggle" type="button" title="Change theme" aria-label="Change color theme"> <i class="fa-half-sun-moon" id="light-toggle-system"></i> <i class="fa-solid fa-moon" id="light-toggle-dark"></i> <i class="fa-solid fa-sun" id="light-toggle-light"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <div class="post"> <header class="post-header"> <h1 class="post-title"> HiChat-fog </h1> <p class="desc">eBPF · Linux 内核 · RISC-V · openKylin</p> </header> <article> <div class="profile float-right"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/avatar-480.webp 480w,/assets/img/avatar-800.webp 800w,/assets/img/avatar-1400.webp 1400w," type="image/webp" sizes="(min-width: 930px) 270.0px, (min-width: 576px) 30vw, 95vw"> <img src="/assets/img/avatar.jpg?v=1b869dbf358c30fd229e97d5f105b8e5" class="img-fluid z-depth-1 rounded-circle" width="100%" height="auto" alt="avatar.jpg" loading="eager" onerror="this.onerror=null; document.querySelectorAll('.responsive-img-srcset').forEach(function (n) { n.remove(); });"> </source></picture> </figure> <div class="more-info"> <p><i class="fab fa-github"></i> <a href="https://github.com/HiChat-fog" rel="external nofollow noopener" target="_blank">GitHub · HiChat-fog</a></p> <p><i class="fas fa-music"></i> <a href="https://music.163.com/#/user/home?id=6403910902" rel="external nofollow noopener" target="_blank">我的网易云音乐</a></p> </div> </div> <div class="clearfix"> <p>你好,我是 <strong>HiChat-fog</strong> 👋,一枚喜欢折腾底层系统的学生开发者。</p> <ul> <li>🔧 日常折腾 <strong>eBPF / Linux 内核 / RISC-V / openKylin</strong>,习惯在 QEMU 里把系统点起来做实验</li> <li>🌱 正在学 <strong>Rust + aya</strong>,想让 eBPF 程序写得更优雅</li> <li>🎵 网易云深度用户,代码写不动了就听歌</li> <li>🐍 我的 GitHub 主页上有贪吃蛇、3D 贡献图、网易云卡片、”正在单曲循环”等一整套自动化小玩具,全部用 GitHub Actions 自建,欢迎参观</li> </ul> <p>本站基于开源模板 <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a>(16k★)定制,源码在 <a href="https://github.com/HiChat-fog/hichat-fog.github.io/tree/source" rel="external nofollow noopener" target="_blank">GitHub</a> 上,全自动构建部署。</p> </div> <div class="social"> <div class="contact-icons"> <a href="mailto:" title="Email"><i class="fa-solid fa-envelope"></i></a> <a href="/feed.xml" title="Rss icon"><i class="fa-solid fa-square-rss"></i></a> </div> <div class="contact-note"></div> </div> </article> </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2026 HiChat-fog . © 2026 HiChat-fog · Built with <a href="https://github.com/alshedivat/al-folio" target="_blank" rel="external nofollow noopener">al-folio</a> &amp; <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a>, hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. </div> </footer> <script>
+  window.alFolio = {
+    compatBootstrap: false
+  };
+</script> <script src="/assets/js/nav-toggle.js?v=141bd79a73ebc0f0b6ea58e440ae79fc"></script> <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script> <script defer src="/assets/js/masonry.js?v=e49affc7bd2646f6acdad1dbe02c2359" type="text/javascript"></script> <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js" integrity="sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI=" crossorigin="anonymous"></script> <script src="/assets/al_math/js/mathjax-setup.js"></script> <script src="/assets/js/tooltips-setup.js?v=fe487e99db6c43751e6e7bdb2d6a0611"></script> <script src="/assets/js/no_defer.js?v=53b1b1a645525975c963ce8bf8bfefcf"></script> <script defer src="/assets/js/common.js?v=87baac90f765f2f3362dcf6aaf312a8a"></script> <script defer src="/assets/js/copy_code.js?v=c8a01c11a92744d44b093fc3bda915df" type="text/javascript"></script> <script defer src="/assets/js/jupyter_new_tab.js?v=896d254890d9b47f0281f63bfccf0dee"></script> <script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script> <script async src="https://badge.dimensions.ai/badge.js"></script> <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc=" crossorigin="anonymous"></script> <script defer src="/assets/al_img_tools/js/zoom.js"></script> <script defer src="/assets/js/progress-bar.js?v=499464c5c63ced6cf7ad62509f1e2610" type="text/javascript"></script> <script src="https://cdn.jsdelivr.net/npm/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js" integrity="sha256-uMJJ3EoTyfRBoTbR+lrfu1uRQ87RZG8AR3cVNuQVeFg=" crossorigin="anonymous"></script> <script>
+    addBackToTop();
+  </script> <script type="module" src="/assets/al_search/js/search/ninja-keys.min.js"></script> <ninja-keys hidebreadcrumbs noautoloadmdicons placeholder="Type to start searching"></ninja-keys> <script src="/assets/al_search/js/search-setup.js"></script> <script>
+// get the ninja-keys element
+const ninja = document.querySelector('ninja-keys');
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+// add the home and posts menu items
+ninja.data = [{
+    id: "nav-about",
+    title: "about",
+    section: "Navigation",
+    handler: () => {
+      window.location.href = "/";
+    },
+  },{id: "nav-about",
+          title: "about",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/";
+          },
+        },{id: "nav-projects",
+          title: "projects",
+          description: "我的一些项目与实验仓库。",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/projects/";
+          },
+        },{id: "projects-pmp-ebpf-demo",
+          title: 'pmp-ebpf-demo',
+          description: "eBPF 示例与演示代码合集,记录内核观测方面的实验过程。",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/1_pmp-ebpf/";
+            },},{id: "projects-github-profile-自动化玩具",
+          title: 'GitHub Profile 自动化玩具',
+          description: "我的 GitHub 主页仓库 —— 打字动画、贪吃蛇、3D 贡献图、网易云卡片、&quot;正在单曲循环&quot;,全部 Actions 自建。",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/2_profile/";
+            },},{id: "projects-本站源码",
+          title: '本站源码',
+          description: "你正在看的这个网站 —— 基于 al-folio(16k★)定制,Actions 自动构建部署到 GitHub Pages。",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/3_homepage/";
+            },},{id: "teachings-data-science-fundamentals",
+          title: 'Data Science Fundamentals',
+          description: "This course covers the foundational aspects of data science, including data collection, cleaning, analysis, and visualization. Students will learn practical skills for working with real-world datasets.",
+          section: "Teachings",handler: () => {
+              window.location.href = "/teachings/data-science-fundamentals/";
+            },},{id: "teachings-introduction-to-machine-learning",
+          title: 'Introduction to Machine Learning',
+          description: "This course provides an introduction to machine learning concepts, algorithms, and applications. Students will learn about supervised and unsupervised learning, model evaluation, and practical implementations.",
+          section: "Teachings",handler: () => {
+              window.location.href = "/teachings/introduction-to-machine-learning/";
+            },},{
+        id: 'social-email',
+        title: 'email',
+        section: 'Socials',
+        handler: () => {
+          window.open("mailto:", "_blank");
+        },
+      },{
+        id: 'social-rss',
+        title: 'RSS Feed',
+        section: 'Socials',
+        handler: () => {
+          window.open("/feed.xml", "_blank");
+        },
+      },{
+      id: 'light-theme',
+      title: 'Change theme to light',
+      description: 'Change the theme of the site to Light',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("light");
+      },
+    },
+    {
+      id: 'dark-theme',
+      title: 'Change theme to dark',
+      description: 'Change the theme of the site to Dark',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("dark");
+      },
+    },
+    {
+      id: 'system-theme',
+      title: 'Use system default theme',
+      description: 'Change the theme of the site to System Default',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("system");
+      },
+    },];
 
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <main class="page-shell">
-    <div class="shell">
-      <div class="hero">
-
-        <!-- Name -->
-        <div class="name">HICHAT</div>
-
-        <!-- Title Row: rotating prefix + role + cursor -->
-        <div class="title-row">
-          <div class="role">
-            <span class="prefix" id="roll"></span>
-            <span class="spacer"></span>
-            <span id="role-text"></span>
-            <span class="cursor" id="cursor">|</span>
-          </div>
-        </div>
-
-        <!-- Buttons + Panel Stack -->
-        <div class="stack">
-          <div class="actions">
-            <button data-panel="about">ABOUT</button>
-            <button data-panel="contact">CONTACT</button>
-          </div>
-
-          <div class="panel-shell">
-            <!-- About Panel -->
-            <section class="panel about" id="panel-about" hidden>
-              <div class="panel-title">About</div>
-              <p class="lead">Systems × Security × AI</p>
-              <p>OS kernel hacking, offensive security, LLM application development.</p>
-              <p>From bare metal to the cloud — every layer is a playground.</p>
-              <p class="muted">Always down to build cool stuff. Let's talk.</p>
-            </section>
-
-            <!-- Contact Panel -->
-            <section class="panel contact" id="panel-contact" hidden>
-              <div class="panel-title">Contact</div>
-              <div class="links">
-                <a class="pill douyin" href="https://www.douyin.com/user/MS4wLjABAAAATZfVGOnbuEFegNSMu0TEtVdcfpBa0Oy4zOVVqwURVPeqbjAGIylPny4_XEpLTZEu?from_tab_name=main" target="_blank" rel="noreferrer">
-                  <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.53.02C13.84.02 15.14.02 16.44.02C16.42 2.58 17.37 4.58 19.31 5.62C19.31 7.25 19.31 8.87 19.31 10.5C17.82 9.79 16.74 8.77 16.44 7.16C16.43 10.5 16.42 13.83 16.43 17.16C16.37 20.68 13.22 23.97 9.55 23.98C5.56 23.99 2.63 20.58 2.59 17.13C2.56 13.67 5.47 10.33 9.2 10.33C9.84 10.33 10.45 10.43 11.02 10.61C11.02 12.3 11.02 13.98 11.02 15.66C10.44 15.48 9.82 15.38 9.2 15.38C8.02 15.38 7.03 16.34 7.03 17.56C7.08 18.77 8.07 19.68 9.28 19.67C10.49 19.66 11.42 18.65 11.42 17.44C11.43 13.98 11.42 7.09 11.42 3.58C11.42 2.39 11.42 1.21 12.53.02Z"/></svg>
-                  抖音
-                </a>
-                <a class="pill github" href="https://github.com/HiChat-fog" target="_blank" rel="noreferrer">
-                  <svg viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8 .2a8 8 0 0 0-2.53 15.6c.4.07.55-.17.55-.38v-1.33c-2.24.49-2.71-1.08-2.71-1.08-.36-.92-.88-1.16-.88-1.16-.72-.5.06-.49.06-.49.8.06 1.23.83 1.23.83.71 1.22 1.86.87 2.31.67.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.58.82-2.14-.08-.2-.36-1.02.08-2.12 0 0 .67-.22 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.14 0 3.07-1.87 3.75-3.65 3.95.29.25.55.73.55 1.48V15.4c0 .21.15.46.55.38A8 8 0 0 0 8 .2Z"/></svg>
-                  GitHub
-                </a>
-              </div>
-              <div class="im-links">
-                <button class="pill wechat" onclick="navigator.clipboard.writeText('Arthur_Morganation');this.textContent='已复制 ✓';setTimeout(()=>this.textContent='微信 Arthur_Morganation',1500)">
-                  <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8.69 3.46C4.42 3.46.85 6.66.85 10.56c0 2.17 1.1 4.14 2.84 5.42l-.7 2.14 2.42-1.21c.9.24 1.83.37 2.78.37.3 0 .6-.01.9-.04-.15-.42-.23-.86-.23-1.32 0-3.78 3.36-6.86 7.47-6.86.36 0 .71.02 1.06.07-.57-3.32-3.78-5.87-7.7-5.87zm3.35 4.42a.9.9 0 1 1 0 1.8.9.9 0 0 1 0-1.8zm-5.3 1.8a.9.9 0 1 1 0-1.8.9.9 0 0 1 0 1.8zm14.4.4c-3.97 0-7.2 2.95-7.2 6.56 0 3.62 3.23 6.57 7.2 6.57.87 0 1.7-.14 2.48-.4l2.08 1.04-.6-1.82c1.49-1.26 2.44-2.96 2.44-4.88.01-3.62-3.22-6.57-7.2-6.57zm-3.24 4.6a.82.82 0 1 1 0-1.64.82.82 0 0 1 0 1.64zm5.06 1.63a.82.82 0 1 1 0-1.64.82.82 0 0 1 0 1.64z"/></svg>
-                  微信 Arthur_Morganation
-                </button>
-                <button class="pill qq" onclick="navigator.clipboard.writeText('2138299057');this.textContent='已复制 ✓';setTimeout(()=>this.textContent='QQ 2138299057',1500)">
-                  <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.003 2c-2.008 0-3.636 1.628-3.636 3.636 0 .412.067.811.194 1.186-2.833 1.609-4.77 4.454-5.09 7.815-.1 1.054.108 2.088.596 2.98.305.556.732 1.016 1.246 1.334.462.286.994.45 1.544.45.507 0 .989-.14 1.398-.396.058.96.216 1.883.466 2.724.172.58.376 1.098.616 1.518.215.377.462.683.746.886.283.2.588.297.93.297.48 0 .86-.198 1.143-.493.247-.256.418-.59.53-.98.145-.505.23-1.08.27-1.706.082.02.166.034.25.044v.427c0 .93-.76 1.69-1.69 1.69H13.5v.62c.57.1 1.05.33 1.42.66.46.41.78.97.9 1.59H8.18c.12-.62.44-1.18.9-1.59.37-.33.85-.56 1.42-.66v-.62H9.64c-.93 0-1.69-.76-1.69-1.69v-.427c.084-.01.168-.024.25-.044.04.626.125 1.201.27 1.706.112.39.283.724.53.98.283.295.663.493 1.143.493.342 0 .647-.097.93-.297.284-.203.53-.51.746-.886.24-.42.444-.939.616-1.518.25-.841.408-1.765.466-2.724.409.256.891.396 1.398.396.55 0 1.082-.164 1.544-.45.514-.318.94-.778 1.246-1.334.488-.892.697-1.926.597-2.98-.32-3.361-2.257-6.206-5.09-7.815.127-.375.193-.774.193-1.186C15.64 3.628 14.011 2 12.003 2z"/></svg>
-                  QQ 2138299057
-                </button>
-              </div>
-            </section>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </main>
-
-  <script src="script.js"></script>
-</body>
-</html>
+</script> <script src="/assets/al_search/js/shortcut-key.js"></script> </body> </html>

@@ -1,6 +1,6 @@
 ---
 layout: about
-title: about
+title: 首页
 permalink: /
 nav: false
 subtitle: eBPF · Linux 内核 · RISC-V
@@ -17,9 +17,10 @@ selected_papers: false
 social: true
 
 announcements:
-  enabled: false
+  enabled: true
 latest_posts:
-  enabled: false
+  enabled: true
+  limit: 2
 ---
 
 你好,我是 **HiChat-fog** 👋,一枚喜欢折腾底层系统的学生开发者。

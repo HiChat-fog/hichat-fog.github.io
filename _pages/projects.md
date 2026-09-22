@@ -1,6 +1,6 @@
 ---
 layout: page
-title: projects
+title: 项目
 permalink: /projects/
 description: 我的一些项目与实验仓库。
 nav: true

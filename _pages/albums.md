@@ -23,7 +23,19 @@ description: 我经常听的专辑,来自网易云播放记录,定时自动更�
 
 <script>
 (function () {
-  var base = 'https://cdn.jsdelivr.net/gh/HiChat-fog/netease-cloud-music-card@main/';
+  // 直接从 GitHub API 读取已提交的数据,绕开 jsdelivr/raw 的缓存层,所见即所提交
+  var API = 'https://api.github.com/repos/HiChat-fog/netease-cloud-music-card/contents/';
+  function decodeB64(b64) {
+    var bin = atob(b64.replace(/\s/g, ''));
+    var bytes = new Uint8Array(bin.length);
+    for (var i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
+    return new TextDecoder('utf-8').decode(bytes);
+  }
+  function load(file) {
+    return fetch(API + file, { cache: 'no-store' })
+      .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+      .then(function (j) { return JSON.parse(decodeB64(j.content)); });
+  }
   function card(a, showCount) {
     return '<div class="col-sm-6 col-md-3 mt-3 mb-3">'
       + '<div class="card h-100" style="border:none;background:transparent;">'
@@ -47,12 +59,10 @@ description: 我经常听的专辑,来自网易云播放记录,定时自动更�
   function fail(gridId) {
     document.getElementById(gridId).innerHTML = '<div class="col-12"><p class="text-muted">播放数据暂时没加载出来,稍后再来看看。</p></div>';
   }
-  fetch(base + 'top-albums.json?ts=' + Date.now())
-    .then(function (r) { return r.json(); })
+  load('top-albums.json')
     .then(function (d) { render('album-grid', d, true); })
     .catch(function () { fail('album-grid'); });
-  fetch(base + 'top-albums-history.json?ts=' + Date.now())
-    .then(function (r) { return r.json(); })
+  load('top-albums-history.json')
     .then(function (d) { render('album-history-grid', d, false); })
     .catch(function () { fail('album-history-grid'); });
 })();

@@ -219,6 +219,16 @@ kramdown:
 include: ["_pages"]
 exclude:
   - AGENTS.md
+  - build.log
+  - README.md
+  - test/
+  - docs/
+  - readme_preview/
+  - _teachings/
+  - .devcontainer/
+  - .claude/
+  - .codex/
+  - .agents/
   - al-folio-upgrade-report.md
   - bin/
   - CLAUDE.md

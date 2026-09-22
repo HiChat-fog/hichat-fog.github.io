@@ -32,8 +32,8 @@ latest_posts:
 
 <a href="https://music.163.com/#/user/home?id=6403910902" target="_blank" rel="noopener">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/HiChat-fog/netease-cloud-music-card@main/music-now-dark.svg" />
-    <img src="https://cdn.jsdelivr.net/gh/HiChat-fog/netease-cloud-music-card@main/music-now-light.svg" alt="正在单曲循环" width="470" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/HiChat-fog/netease-cloud-music-card@main/music-now-dark.svg?v=2" />
+    <img src="https://cdn.jsdelivr.net/gh/HiChat-fog/netease-cloud-music-card@main/music-now-light.svg?v=2" alt="正在单曲循环" width="470" />
   </picture>
 </a>
 

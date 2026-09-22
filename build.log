@@ -7,6 +7,7 @@ Configuration file: /home/runner/work/hichat-fog.github.io/hichat-fog.github.io/
        Destination: /home/runner/work/hichat-fog.github.io/hichat-fog.github.io/_site
  Incremental build: disabled. Enable with --incremental
       Generating... 
+DEPRECATION WARNING: to_time will always preserve the timezone offset of the receiver in Rails 8.0. To opt in to the new behavior, set `ActiveSupport.to_time_preserves_timezone = true`. (called from load at /home/runner/work/hichat-fog.github.io/hichat-fog.github.io/vendor/bundle/ruby/3.3.0/bin/jekyll:25)
 Terser: Minifying /home/runner/work/hichat-fog.github.io/hichat-fog.github.io/test/style_contract.js
 Terser: Minifying /home/runner/work/hichat-fog.github.io/hichat-fog.github.io/test/visual/distill.spec.js
 Terser: Minifying /home/runner/work/hichat-fog.github.io/hichat-fog.github.io/test/visual/helpers.js
@@ -87,6 +88,12 @@ Terser: Minifying /home/runner/work/hichat-fog.github.io/hichat-fog.github.io/te
        Imagemagick: Adding static file /home/runner/work/hichat-fog.github.io/hichat-fog.github.io/_site/assets/img/9-800.webp
        Imagemagick: Generating image "/home/runner/work/hichat-fog.github.io/hichat-fog.github.io/_site/assets/img/9-1400.webp"
        Imagemagick: Adding static file /home/runner/work/hichat-fog.github.io/hichat-fog.github.io/_site/assets/img/9-1400.webp
+       Imagemagick: Generating image "/home/runner/work/hichat-fog.github.io/hichat-fog.github.io/_site/assets/img/albums/land-of-the-free-480.webp"
+       Imagemagick: Adding static file /home/runner/work/hichat-fog.github.io/hichat-fog.github.io/_site/assets/img/albums/land-of-the-free-480.webp
+       Imagemagick: Generating image "/home/runner/work/hichat-fog.github.io/hichat-fog.github.io/_site/assets/img/albums/land-of-the-free-800.webp"
+       Imagemagick: Adding static file /home/runner/work/hichat-fog.github.io/hichat-fog.github.io/_site/assets/img/albums/land-of-the-free-800.webp
+       Imagemagick: Generating image "/home/runner/work/hichat-fog.github.io/hichat-fog.github.io/_site/assets/img/albums/land-of-the-free-1400.webp"
+       Imagemagick: Adding static file /home/runner/work/hichat-fog.github.io/hichat-fog.github.io/_site/assets/img/albums/land-of-the-free-1400.webp
        Imagemagick: Generating image "/home/runner/work/hichat-fog.github.io/hichat-fog.github.io/_site/assets/img/avatar-480.webp"
        Imagemagick: Adding static file /home/runner/work/hichat-fog.github.io/hichat-fog.github.io/_site/assets/img/avatar-480.webp
        Imagemagick: Generating image "/home/runner/work/hichat-fog.github.io/hichat-fog.github.io/_site/assets/img/avatar-800.webp"
@@ -135,7 +142,6 @@ Terser: Minifying /home/runner/work/hichat-fog.github.io/hichat-fog.github.io/te
        Imagemagick: Adding static file /home/runner/work/hichat-fog.github.io/hichat-fog.github.io/_site/assets/img/template_error-800.webp
        Imagemagick: Generating image "/home/runner/work/hichat-fog.github.io/hichat-fog.github.io/_site/assets/img/template_error-1400.webp"
        Imagemagick: Adding static file /home/runner/work/hichat-fog.github.io/hichat-fog.github.io/_site/assets/img/template_error-1400.webp
-       Imagemagick: Generated 60 file(s)
+       Imagemagick: Generated 63 file(s)
          AutoPages: Disabled/Not configured in site.config.
-[33m        Pagination: Is enabled, but I couldn't find any pagination page. Skipping pagination. Pages must have 'pagination: enabled: true' in their front-matter for pagination to work.[0m
-        Pagination: Complete, processed pagination page(s)
+        Pagination: Complete, processed 1 pagination page(s)

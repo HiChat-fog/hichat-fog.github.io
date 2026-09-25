@@ -4,6 +4,7 @@ title: 书单
 permalink: /books/
 nav: false
 collection: books
+covers: /assets/img/book_covers/
 ---
 
-书单整理中。欢迎推荐你觉得我会喜欢的书——大概率是操作系统、体系结构、Rust 与金属乐相关的一切。
+把喜欢的书一本一本挂在这里——科幻与古典推理居多,慢慢补充。

@@ -7,7 +7,5 @@ dropdown: true
 children:
   - title: 简历
     permalink: /cv/
-  - title: divider
-  - title: 书单
-    permalink: /books/
+
 ---
